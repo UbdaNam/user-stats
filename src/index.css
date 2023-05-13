@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 3rem;
+  width: 30vw;
+  gap: 1rem;
+  border: 1px solid #d4c4c4;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.card {
+  padding: 0.5rem;
+  background-color: rgba(73, 155, 158, 0.333);
+}
