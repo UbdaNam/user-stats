@@ -1,14 +1,14 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
   users: [],
   isLoading: false,
-  error: "",
+  error: '',
 };
-const baseURL = "https://randomuser.me/api/?results=10";
+const baseURL = 'https://randomuser.me/api/?results=10';
 export const fetchUsers = createAsyncThunk(
-  "users/fetchUser",
+  'users/fetchUser',
   async (arg, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(baseURL);
@@ -16,10 +16,10 @@ export const fetchUsers = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
-  }
+  },
 );
 const usersSlice = createSlice({
-  name: "users",
+  name: 'users',
   initialState,
   extraReducers: (builder) => {
     builder
